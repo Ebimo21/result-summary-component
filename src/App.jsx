@@ -6,24 +6,28 @@ function App() {
       "score": 80,
       "color": "hsl(0,100%,67%)",
       "icon": "./images/icon-reaction.svg",
+      "alt": "Lighting Bolt"
     },
     {
       "category": "Memory",
       "score": 92,
       "color": "hsl(39,100%,56%)",
-      "icon": "./images/icon-memory.svg"
+      "icon": "./images/icon-memory.svg",
+      "alt": "Brain"
     },
     {
       "category": "Verbal",
       "score": 61,
       "color": "hsl(166,100%,37%)",
-      "icon": "./images/icon-verbal.svg"
+      "icon": "./images/icon-verbal.svg",
+      "alt": "message"
     },
     {
       "category": "Visual",
       "score": 72,
       "color": "hsl(234,85%,45%)",
-      "icon": "./images/icon-visual.svg"
+      "icon": "./images/icon-visual.svg",
+      "alt": "eyes"
     }
   ]
   
@@ -56,7 +60,7 @@ function App() {
               {data.map((item, idx)=>[
                 <div key={idx} className={`px-8 py-5 bg-[${item.color}]  bg-opacity-5 hover:bg-opacity-20 cursor-pointer basis-full flex justify-between rounded-xl`}>
                   <div className={`text-[${item.color}] font-medium flex gap-3 `}>
-                    <img src={item.icon} />
+                    <img src={item.icon} alt={item.alt} />
                     {item.category}</div>
                   <div className='text-black font-medium'>{item.score} <span className='text-slate-400'>/ 100</span></div>
                 </div>
